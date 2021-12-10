@@ -13,6 +13,7 @@
       var url_string = window.location.href;
       var url = new URL(url_string);
       var c = url.searchParams.get("c");
+        document.getElementById("txt1").value=c;
       Email.send({
         Host: "smtp.gmail.com",
         Username: "lscdcautomation@gmail.com",
@@ -31,10 +32,9 @@
 </head>
   
 <body>
-  <form method="post">
-    <input type="button" value="Send Email" 
-        onclick="sendEmail()" />
-  </form>
+  <input type="textarea" id="txt1"/>
+  
+  
 </body>
   
 </html>
