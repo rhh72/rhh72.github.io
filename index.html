@@ -15,6 +15,7 @@
       var vtxt = url.searchParams.get("vtxt");
       var oid = url.searchParams.get("oid");
       var vid = url.searchParams.get("vid");
+      var slackid = url.searchParams.get("slackid");
         document.getElementById("txt1").value=vtxt;
       Email.send({
         Host: "smtp.gmail.com",
@@ -23,7 +24,7 @@
         To: 'richard@lightstreet.com',
         From: "richard@lightstreet.com",
         Subject: "RatingChange" + oid + ":" + vid,
-        Body: "OK",
+        Body: slackid + ":" + vtxt,
       })
         .then(function (message) {
             window.open('','_self').close();
