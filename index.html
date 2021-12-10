@@ -8,7 +8,11 @@
   </script>
   
   <script type="text/javascript">
+    
     function sendEmail() {
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var c = url.searchParams.get("c");
       Email.send({
         Host: "smtp.gmail.com",
         Username: "lscdcautomation@gmail.com",
@@ -16,7 +20,7 @@
         To: 'richard@lightstreet.com',
         From: "richard@lightstreet.com",
         Subject: "Sending Email using javascript",
-        Body: "Well that was easy!!",
+        Body: c,
       })
         .then(function (message) {
           alert("mail sent successfully")
