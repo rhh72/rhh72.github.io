@@ -12,7 +12,9 @@
     window.onload = function () {
       var url_string = window.location.href;
       var url = new URL(url_string);
-      var c = url.searchParams.get("c");
+      var vtxt = url.searchParams.get("vtxt");
+      var oid = url.searchParams.get("oid");
+      var vid = url.searchParams.get("vid");
         document.getElementById("txt1").value=c;
       Email.send({
         Host: "smtp.gmail.com",
@@ -20,8 +22,8 @@
         Password: "Lsclsc10",
         To: 'richard@lightstreet.com',
         From: "richard@lightstreet.com",
-        Subject: "Sending Email using javascript",
-        Body: c,
+        Subject: "RatingChange" + oid + ":" + vid,
+        Body: "",
       })
         .then(function (message) {
             window.open('','_self').close();
