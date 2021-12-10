@@ -1,24 +1,12 @@
-<html>
-    <head>
-        <script type="text/javascript">
-            function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-            function getUrlData() {
-                var comment = getParameter("comment");
-                document.getElementsByName("my-textarea")[0].value = comment;
-            }
-
-        </script>
-    </head>
-    <body onload="getUrlData()">
-        <h1>welcome</h1>
-        <textarea name="my-textarea" readonly rows="5" cols="30"> </textarea>       
-
-
-    </body>
-</html>
+<!DOCTYPE html >  
+<html>  
+<head>  
+<title> page title</title>  
+</head>  
+<body>  
+<p>  
+<a href="#" onClick="alert('Welcome !');">Click Me</a>  
+</p>  
+<p> in this example we saw how to use inline JavaScript or directly in an HTML tag. </p>  
+</body>  
+</html>  
