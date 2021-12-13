@@ -24,7 +24,7 @@
         To: 'richard@lightstreet.com',
         From: "richard@lightstreet.com",
         Subject: "RatingChange" + oid + ":" + vid,
-        Body: slackid + ":" + vtxt,
+        Body: slackid + ":" + vtxt.replace("_",""),
       })
         .then(function (message) {
             window.open('','_self').close();
