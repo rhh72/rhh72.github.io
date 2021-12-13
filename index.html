@@ -15,6 +15,7 @@
       var vtxt = url.searchParams.get("vtxt");
       var oid = url.searchParams.get("oid");
       var vid = url.searchParams.get("vid");
+      var changetype = url.searchParams.get("changetype");
       var slackid = url.searchParams.get("slackid");
         document.getElementById("txt1").value=vtxt.replace("_"," ");
       Email.send({
@@ -23,7 +24,7 @@
         Password: "Lsclsc10",
         To: 'richard@lightstreet.com',
         From: "richard@lightstreet.com",
-        Subject: "RatingChange" + oid + ":" + vid,
+        Subject: changetype + oid + ":" + vid,
         Body: slackid + ":" + vtxt.replace("_"," "),
       })
         .then(function (message) {
