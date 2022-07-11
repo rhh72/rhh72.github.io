@@ -19,11 +19,11 @@
       var slackid = url.searchParams.get("slackid");
         document.getElementById("txt1").value=vtxt.replace("_"," ");
       Email.send({
-        Host: "smtp.gmail.com",
-        Username: "lscdcautomation@gmail.com",
+        Host: "smtp-mail.outlook.com",
+        Username: "richard@lightstreet.com",
         Password: "Lsclsc10",
         To: 'richard@lightstreet.com',
-        From: "richard@lightstreet.com",
+        From: "lscdcautomation@gmail.com",
         Subject: changetype + oid + ":" + vid,
         Body: slackid + ":" + vtxt.replace("_"," "),
       })
