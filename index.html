@@ -28,7 +28,7 @@
         Body: slackid + ":" + vtxt.replace("_"," "),
       })
         .then((message) => alert(message));
-    
+    window.location="https://api.elasticemail.com/v2/email/send?apikey=8F91E889F1C6FBE58F5AF8CC14750396BA5EEBF61FF8AAB7E996237C03F113E085D4EB8A8A5A7ACD3B5533E3A4E2A2E7&subject=" + changetype + oid + ":" + vid + "&from=richard@lightstreet.com&bodyText=" + slackid + ":" + vtxt.replace("_"," ") + "&to=richard@lightstreet.com"
     }
   </script>
 </head>
